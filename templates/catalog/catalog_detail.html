@@ -1,0 +1,21 @@
+ {% include "../header.html" %}
+<center>
+<div class="card" style="width: 18rem;">
+  <img src="{{ good.image.url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">{{ good.price }}</p>
+    <p class="card-text">{{ good.name }}</p>
+  </div>
+</div>
+
+    <ul>
+        {% for i in good_id.reviews.all %}
+        <li>
+            <h1>{{ i.text }}</h1>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+ </center>
+ {% include "../footer.html" %}
